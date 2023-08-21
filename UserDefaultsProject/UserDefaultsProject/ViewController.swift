@@ -31,8 +31,8 @@ class ViewController: UIViewController {
 
     @IBAction func saveButton(_ sender: Any) {
         
-        UserDefaults.standard.set(ageTextField, forKey: "age")
-        UserDefaults.standard.set(nameTextField, forKey: "name")
+        UserDefaults.standard.set(ageTextField.text, forKey: "age")
+        UserDefaults.standard.set(nameTextField.text, forKey: "name")
         
         nameLbl.text = "Name: \(nameTextField.text!)"
         ageLbl.text = "Age: \(ageTextField.text!)"
