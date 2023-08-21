@@ -17,37 +17,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2cw-Kc-bce">
-                                <rect key="frame" x="16" y="100" width="361" height="34"/>
+                                <rect key="frame" x="16" y="359" width="361" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="096-Y9-2Oh">
-                                <rect key="frame" x="16" y="142" width="361" height="34"/>
+                                <rect key="frame" x="16" y="409" width="361" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bde-3a-Fas">
-                                <rect key="frame" x="166" y="408.66666666666669" width="61" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="tCb-gI-ojc"/>
-                                </constraints>
+                                <rect key="frame" x="166" y="660" width="61" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save"/>
                                 <connections>
-                                    <action selector="saveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gvj-UE-a9z"/>
+                                    <action selector="saveButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gvj-UE-a9z"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zna-a2-dPR">
-                                <rect key="frame" x="16" y="451.66666666666669" width="361" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="o1O-Nh-CMK"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSw-3Q-cWR">
+                                <rect key="frame" x="159.66666666666666" y="711" width="74" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YyI-Pp-RsL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSX-2P-Nsm">
+                                <rect key="frame" x="16" y="554" width="361" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSX-2P-Nsm">
-                                <rect key="frame" x="16" y="480.66666666666669" width="361" height="21.333333333333314"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zna-a2-dPR">
+                                <rect key="frame" x="16" y="518" width="361" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -56,22 +58,24 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="zna-a2-dPR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qSX-2P-Nsm" secondAttribute="leading" id="3oA-qW-R5i"/>
-                            <constraint firstItem="2cw-Kc-bce" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="41" id="5Tr-2J-kH0"/>
-                            <constraint firstItem="096-Y9-2Oh" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zna-a2-dPR" secondAttribute="trailing" id="9rC-GO-j56"/>
-                            <constraint firstItem="2cw-Kc-bce" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Eay-bd-e6w"/>
-                            <constraint firstItem="2cw-Kc-bce" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="I2V-lA-Mzy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qSX-2P-Nsm" secondAttribute="bottom" constant="316" id="Ku3-wZ-dQf"/>
-                            <constraint firstItem="bde-3a-Fas" firstAttribute="centerX" secondItem="zna-a2-dPR" secondAttribute="centerX" id="LSy-jy-Rzl"/>
-                            <constraint firstItem="2cw-Kc-bce" firstAttribute="leading" secondItem="096-Y9-2Oh" secondAttribute="leading" id="MUA-6O-NcG"/>
-                            <constraint firstItem="zna-a2-dPR" firstAttribute="top" secondItem="bde-3a-Fas" secondAttribute="bottom" constant="8" id="TPh-KP-Oz1"/>
-                            <constraint firstItem="2cw-Kc-bce" firstAttribute="trailing" secondItem="096-Y9-2Oh" secondAttribute="trailing" id="j3Z-xc-51y"/>
-                            <constraint firstItem="qSX-2P-Nsm" firstAttribute="trailing" secondItem="096-Y9-2Oh" secondAttribute="trailing" id="l8S-Pq-L7z"/>
-                            <constraint firstItem="zna-a2-dPR" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qSX-2P-Nsm" secondAttribute="trailing" id="sQR-aJ-BDA"/>
-                            <constraint firstItem="qSX-2P-Nsm" firstAttribute="top" secondItem="zna-a2-dPR" secondAttribute="bottom" constant="8" id="ufz-YC-Xcj"/>
-                            <constraint firstItem="096-Y9-2Oh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zna-a2-dPR" secondAttribute="leading" id="vYt-gS-ahe"/>
-                            <constraint firstItem="bde-3a-Fas" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wY0-im-wX7"/>
-                            <constraint firstItem="096-Y9-2Oh" firstAttribute="top" secondItem="2cw-Kc-bce" secondAttribute="bottom" constant="8" id="ww9-N7-09e"/>
+                            <constraint firstItem="096-Y9-2Oh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2RG-Tf-BPo"/>
+                            <constraint firstItem="bde-3a-Fas" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="166" id="Bt3-cY-9wr"/>
+                            <constraint firstItem="096-Y9-2Oh" firstAttribute="top" secondItem="2cw-Kc-bce" secondAttribute="bottom" constant="16" id="EN1-i8-dyZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bde-3a-Fas" secondAttribute="trailing" constant="166" id="Mue-HZ-IfH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GSw-3Q-cWR" secondAttribute="bottom" constant="72" id="Sol-NZ-uAF"/>
+                            <constraint firstItem="zna-a2-dPR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="bZw-mX-ke9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qSX-2P-Nsm" secondAttribute="trailing" constant="16" id="bwM-ai-8Pq"/>
+                            <constraint firstItem="2cw-Kc-bce" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="c6e-Em-Pk4"/>
+                            <constraint firstItem="GSw-3Q-cWR" firstAttribute="top" secondItem="bde-3a-Fas" secondAttribute="bottom" constant="16" id="ddX-S9-EcT"/>
+                            <constraint firstItem="GSw-3Q-cWR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159.66999999999999" id="glK-3T-KQJ"/>
+                            <constraint firstItem="zna-a2-dPR" firstAttribute="top" secondItem="096-Y9-2Oh" secondAttribute="bottom" constant="75" id="jCb-LE-qD7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zna-a2-dPR" secondAttribute="trailing" constant="16" id="lsI-ii-g03"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2cw-Kc-bce" secondAttribute="trailing" constant="16" id="mJq-9Q-BXx"/>
+                            <constraint firstItem="qSX-2P-Nsm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="tUH-Ao-f5r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GSw-3Q-cWR" secondAttribute="trailing" constant="159.33000000000001" id="u8A-NZ-2Qn"/>
+                            <constraint firstItem="qSX-2P-Nsm" firstAttribute="top" secondItem="zna-a2-dPR" secondAttribute="bottom" constant="16" id="ygx-k5-aJY"/>
+                            <constraint firstItem="bde-3a-Fas" firstAttribute="top" secondItem="qSX-2P-Nsm" secondAttribute="bottom" constant="86" id="zCQ-hO-7Tq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="096-Y9-2Oh" secondAttribute="trailing" constant="16" id="zEQ-uE-G0h"/>
                         </constraints>
                     </view>
                     <connections>

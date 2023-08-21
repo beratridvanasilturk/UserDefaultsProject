@@ -21,24 +21,38 @@ class ViewController: UIViewController {
         let storedAge = UserDefaults.standard.object(forKey: "age")
         
         if let newName = storedName as? String {
-            nameLbl.text = newName
+            nameLbl.text = " Name: \(newName)"
         }
         if let newAge = storedAge as? String {
-            ageLbl.text = newAge
+            ageLbl.text = " Age: \(newAge)"
         }
         
     }
 
-    @IBAction func saveButton(_ sender: Any) {
+    @IBAction func saveButtonTapped(_ sender: Any) {
         
         UserDefaults.standard.set(ageTextField.text, forKey: "age")
         UserDefaults.standard.set(nameTextField.text, forKey: "name")
         
         nameLbl.text = "Name: \(nameTextField.text!)"
         ageLbl.text = "Age: \(ageTextField.text!)"
+    }
+    
+    
+    @IBAction func deleteButtonTapped(_ sender: Any) {
         
+        let storedName = UserDefaults.standard.object(forKey: "name")
+        let storedAge = UserDefaults.standard.object(forKey: "age")
         
+        if storedName as? String != nil {
+            UserDefaults.standard.removeObject(forKey: "name")
+            nameLbl.text = "Name: "
+        }
         
+        if storedAge as? String != nil {
+            UserDefaults.standard.removeObject(forKey: "age")
+            ageLbl.text = "Age: "
+        }
     }
     
 }
